@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merch - Bolachella Music Festival</title>
+    <style>
+        /* Fallback background color - Most basic */
+        #merch-bg-fallback {
+            background-color: #e83e8c !important;
+        }
+        
+        /* Main hero styling with softer colors */
+        #merch-hero {
+            position: relative !important;
+            min-height: 250px !important;
+            color: white !important;
+            background-color: #e83e8c !important; /* Fallback pink */
+            overflow: hidden !important;
+            z-index: 1 !important;
+        }
+        
+        /* Pseudo-element with gradient */
+        #merch-hero::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: -1 !important;
+            background: linear-gradient(-45deg, #e83e8c, #d63384, #6f42c1, #e83e8c) !important;
+            background-size: 400% 400% !important;
+            animation: gradient-flow 10s ease infinite !important;
+        }
+        
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50% !important; }
+            50% { background-position: 100% 50% !important; }
+            100% { background-position: 0% 50% !important; }
+        }
+        
+        #merch-hero .container {
+            position: relative !important;
+            z-index: 2 !important;
+            padding: 40px 20px !important;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        #merch-hero h2 {
+            font-size: 2.8rem !important;
+            letter-spacing: 1px !important;
+            margin-bottom: 15px !important;
+        }
+        
+        #merch-hero p {
+            font-size: 1.4rem !important;
+            letter-spacing: 1px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="bolachella_title.png" alt="Bolachella" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bolachella</a></li>
+                    <li><a href="puestos.html">Puestos</a></li>
+                    <li><a href="merch.html">Merch</a></li>
+                    <li><a href="chelinas.html">Chelinas</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Extra wrapper with fallback background as last resort -->
+    <div id="merch-bg-fallback" style="background-color: #e83e8c !important;" bgcolor="#e83e8c">
+    
+    <!-- Hero section with inline style fallbacks -->
+    <section id="merch-hero" class="page-hero" style="background-color: #e83e8c !important;" bgcolor="#e83e8c">
+        <div class="container">
+            <h2>Merchandising oficial</h2>
+            <p>Un recuerdo para toda la vida</p>
+        </div>
+    </section>
+    
+    </div>
+    <section id="merch-info">
+        <div class="container">
+            <h2>Camiseta oficial</h2>
+            <p>Conmemora tu experiencia en Bolachella con nuestro merchandising oficial. Desde camisetas hasta artículos de edición limitada, tenemos algo para cada fan.</p>
+            
+            <style>
+                /* Two-column layout styles */
+                .merch-two-column {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 40px;
+                    gap: 30px;
+                }
+                
+                .merch-left-column {
+                    flex: 6;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .merch-right-column {
+                    flex: 4;
+                    padding: 20px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    border-radius: 8px;
+                }
+                
+                .image-container {
+                    display: flex;
+                    gap: 15px;
+                    margin-bottom: 20px;
+                }
+                
+                .merch-image-side {
+                    flex: 1;
+                    height: 300px;
+                    background-color: #f8f9fa;
+                    border-radius: 8px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+                }
+                
+                .merch-image-side:hover {
+                    transform: scale(1.02);
+                }
+                
+                .merch-image-side.img1 {
+                    background-color: #e9ecef;
+                    background-image: url('merch_1.jpg');
+                }
+                
+                .merch-image-side.img2 {
+                    background-color: #dee2e6;
+                    background-image: url('merch_2.jpg');
+                }
+                
+                .merch-button-container {
+                    text-align: center;
+                }
+                
+                .merch-button {
+                    display: inline-block;
+                    background-color: #e83e8c;
+                    color: white;
+                    padding: 12px 30px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 16px;
+                    transition: background-color 0.3s;
+                }
+                
+                .merch-button:hover {
+                    background-color: #d63384;
+                }
+                
+                .merch-right-column h3 {
+                    margin-top: 0;
+                    font-size: 1.8rem;
+                    color: #333;
+                }
+                
+                .merch-right-column p {
+                    margin-bottom: 15px;
+                    line-height: 1.6;
+                }
+                
+                /* Responsive styles */
+                @media (max-width: 768px) {
+                    .merch-two-column {
+                        flex-direction: column;
+                    }
+                    
+                    .merch-left-column, .merch-right-column {
+                        flex: 1 0 100%;
+                    }
+                }
+            </style>
+            
+            <div class="merch-two-column">
+                <div class="merch-left-column">
+                    <div class="image-container">
+                        <div class="merch-image-side img1"></div>
+                        <div class="merch-image-side img2"></div>
+                    </div>
+                    <div class="merch-button-container">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnUNXiiKp_UfmSdZVY7Z6fkvchfb1g9VE3T7u008-ITXMj2Q/viewform?usp=header" class="merch-button">Quiero una</a>
+                    </div>
+                </div>
+                
+                <div class="merch-right-column">
+                    <h3>Exclusive Festival Collection</h3>
+                    <p>Nuestra colección de artículos Bolachella 2025 incluye artículos de primera calidad diseñados exclusivamente para lxs asistentes al festival.</p>
+                    <p>Cada pieza está hecha con atención al detalle y cuenta con diseños únicos que celebran el espíritu de Bolachella.</p>
+                    <p>Hay cantidades limitadas disponibles, así que asegúrate de conseguir el tuyo antes de que se agoten.</p>
+                    <p>Todos los artículos están disponibles para su compra en línea y recogida en el recinto del festival.</p>
+                    <p>//El modelo de la izquierda mide 176cm y lleva una talla L. 
+                        La modelo de la derecha mide 165cm y lleva una talla M//
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bolachella Music Festival. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Popup Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modalImage" src="" alt="Enlarged merchandise image">
+        </div>
+    </div>
+
+    <style>
+        /* Modal styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(2px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            position: relative;
+        }
+
+        #modalImage {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        }
+
+        .close-button {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 30px;
+        }
+
+        .close-button:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+    </style>
+
+    <script src="script.js"></script>
+    <script>
+        // Image popup functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the modal
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeButton = document.querySelector('.close-button');
+            
+            // Get the image containers and add click handlers
+            const img1 = document.querySelector('.merch-image-side.img1');
+            const img2 = document.querySelector('.merch-image-side.img2');
+            
+            img1.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = "merch_1.jpg";
+            });
+            
+            img2.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = "merch_2.jpg";
+            });
+            
+            // Close the modal when clicking the close button
+            closeButton.addEventListener('click', function() {
+                modal.style.display = "none";
+            });
+            
+            // Close the modal when clicking outside the image
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

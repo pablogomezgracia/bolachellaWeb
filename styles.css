@@ -1,0 +1,1124 @@
+/* Font Imports */
+@font-face {
+    font-family: 'ChellaStyle';
+    src: url('ChellaType-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('Comfortaa-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa-Regular';
+    src: url('Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa-Bold';
+    src: url('Comfortaa-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #121212;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #ff9d00;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c2185b;
+}
+
+h1, h2, h3, .btn, nav ul li a, .external-button, .chelinas-main-btn {
+    font-family: 'ChellaStyle', 'Arial', sans-serif;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Page Heroes */
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1600x900/?festival') no-repeat center center/cover;
+    height: 50vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px; /* Changed from margin-top to padding-top and increased value */
+}
+
+/* Specific page hero backgrounds */
+#puestos-hero.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('artesanias_1.jpg') no-repeat center center !important;
+    background-size: cover !important;
+}
+
+/* Ensure the merch hero background is highly visible and overrides any caching issues */
+#merch-hero.page-hero {
+    background: linear-gradient(135deg, #ff0099, #ff00ff, #9900ff, #ff0099) !important;
+    background-size: 400% 400% !important;
+    animation: gradient-animation 15s ease infinite !important;
+    background-image: linear-gradient(135deg, #ff0099, #ff00ff, #9900ff, #ff0099) !important;
+    background-color: #ff0099 !important; /* Fallback color in case gradient doesn't load */
+}
+
+/* Keyframe animation with better browser support */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Extra rule to ensure the hero section is properly styled */
+section#merch-hero {
+    min-height: 200px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.page-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.page-hero p {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+/* Header */
+header {
+    background-color: #1a0a2e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Increased z-index */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    width: auto;
+    min-width: 120px;
+    position: relative;
+}
+
+.logo-image {
+    height: 40px;
+    max-width: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    /* Ensure the image displays properly in all browsers */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Force hardware acceleration */
+    backface-visibility: hidden;
+}
+
+/* This style is kept for any remaining h1 tags, but hidden from view */
+header h1 {
+    color: #e91e63;
+    margin: 0;
+    font-size: 28px;
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9d00;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh; /* Ensure it never gets smaller than full viewport */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally too */
+    text-align: center;
+    overflow: hidden;
+    background: url('background_2.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%; /* Ensure full width */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+#hero p {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* About Section */
+#about {
+    background-color: #1e123a;
+    margin-top: 0; /* Remove excessive margin */
+    position: relative;
+    z-index: 1;
+}
+
+#about p {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e0e0e0;
+}
+
+/* Lineup Section */
+#lineup {
+    background-color: #1a0a2e;
+}
+
+/* Festival Poster Styles */
+.full-width-section {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+.mega-poster-container {
+    width: 100%;
+    margin: 0 auto 60px;
+    text-align: center;
+    padding: 0;
+}
+
+.mega-poster-placeholder {
+    background: linear-gradient(45deg, #1a0a2e, #3a1a5e, #e91e63, #ff9d00);
+    border-radius: 0;
+    padding: 80px 20px;
+    width: 100%;
+    min-height: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.mega-poster-placeholder h3 {
+    font-size: 5rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.headline-artists {
+    margin: 40px 0;
+}
+
+.artist-name {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.poster-dates {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 40px 0 20px;
+    letter-spacing: 3px;
+}
+
+.poster-location {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.poster-note {
+    font-style: italic;
+    margin-top: 40px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.artist-section {
+    margin-top: -20px;
+    padding-top: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.artist {
+    background: #2a1a4a;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.artist h3 {
+    color: #ff9d00;
+}
+
+/* Tickets Section */
+#tickets {
+    background-color: #1e123a;
+    padding: 80px 0;
+}
+
+.tickets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.tickets-info {
+    flex: 1;
+    padding-right: 60px;
+}
+
+.tickets-info h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.tickets-info p {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.tickets-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 20px 0 30px;
+    color: #e0e0e0;
+}
+
+.tickets-list li {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.tickets-button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.external-button-container {
+    text-align: center;
+}
+
+.external-button {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+    margin-bottom: 15px;
+}
+
+.external-button:hover {
+    background: #c2185b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.5);
+}
+
+/* Creative Location Icon */
+.location-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    width: 100%;
+    position: relative;
+}
+
+.location-icon-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+.location-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    z-index: 3;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.location-icon-pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #e91e63, #ff9d00);
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.6);
+    z-index: 2;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.location-icon-link:hover .location-icon {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.location-icon-link:hover .location-icon-pulse {
+    animation-duration: 0.8s;
+    background: linear-gradient(45deg, #ff9d00, #e91e63);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1a0a2e;
+    text-align: center;
+}
+
+#contact p {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Puestos Page Styles */
+.vendors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.vendor {
+    background: #2a1a4a;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+}
+
+.vendor-type {
+    color: #ff9d00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vendor-location {
+    margin-top: 10px;
+    font-style: italic;
+    color: #aaa;
+}
+
+.map-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.map-area {
+    background: #2a1a4a;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Merch Page Styles */
+.merch-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.merch-item {
+    background: #2a1a4a;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholder-image {
+    height: 200px;
+    background-color: #3a1a5e;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.locations-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #e0e0e0;
+}
+
+.locations-list li {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Chelinas Page Styles - Simplified */
+#chelinas-content {
+    padding: 60px 0 100px;
+    text-align: center;
+}
+
+.chelinas-wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#chelinas-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#chelinas-content p {
+    font-family: 'Comfortaa-Regular', 'Arial', sans-serif;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.chelinas-button-box {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.chelinas-main-btn {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+}
+
+.chelinas-main-btn:hover {
+    background: #c2185b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4);
+}
+
+.button-note {
+    margin-top: 15px;
+    color: #aaa;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Contact Page Styles */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3a1a5e;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #2a1a4a;
+    color: #e0e0e0;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.contact-item {
+    background: #2a1a4a;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-list {
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: #2a1a4a;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #ff9d00;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 20px;
+    background: #e91e63;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #c2185b;
+    transform: translateY(-3px);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    margin-left: 20px;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Responsive Helper Classes */
+.hide-on-mobile {
+    display: flex;
+}
+
+.show-on-mobile {
+    display: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    /* Tablet adjustments */
+    .container {
+        max-width: 90%;
+    }
+    
+    .mega-poster-placeholder h3 {
+        font-size: 4rem;
+        letter-spacing: 6px;
+    }
+    
+    .artist-name {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+    
+    .tickets-container {
+        gap: 30px;
+    }
+    
+    .tickets-info {
+        padding-right: 30px;
+    }
+    
+    .artist, .vendor, .merch-item, .contact-item, .map-area {
+        width: calc(50% - 15px);
+    }
+    
+    .chelinas-wrapper {
+        width: 90%;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile landscape adjustments */
+    header {
+        padding: 5px 0;
+    }
+    
+    .logo {
+        height: 30px;
+        min-width: 100px;
+    }
+    
+    .logo-image {
+        height: 30px;
+    }
+    
+    .hide-on-mobile {
+        display: none;
+    }
+    
+    .show-on-mobile {
+        display: block;
+    }
+    
+    .artist, .vendor, .merch-item, .contact-item, .map-area {
+        width: 100%;
+    }
+    
+    .ticket {
+        width: 100%;
+    }
+    
+    .page-hero h2 {
+        font-size: 2rem;
+    }
+    
+    .page-hero p {
+        font-size: 1.1rem;
+    }
+    
+    #hero h2 {
+        font-size: 2rem;
+    }
+    
+    #hero p {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .tickets-container {
+        flex-direction: column;
+    }
+    
+    .tickets-info {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Mobile menu improvements */
+    .mobile-menu-btn {
+        display: block !important;
+        order: 3;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+    
+    nav {
+        order: 2;
+        width: auto;
+    }
+    
+    nav ul {
+        display: none !important;
+        width: 100%;
+    }
+    
+    nav ul.active {
+        display: flex !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1a0a2e;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        z-index: 998;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    .mega-poster-placeholder {
+        min-height: 600px;
+        padding: 40px 15px;
+    }
+    
+    .mega-poster-placeholder h3 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    
+    .artist-name {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+    
+    .poster-dates {
+        font-size: 1.4rem;
+        margin: 25px 0 15px;
+    }
+    
+    .poster-location {
+        font-size: 1rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        margin: 5px 0;
+        width: 200px;
+    }
+    
+    .contact-details {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile portrait adjustments */
+    section {
+        padding: 40px 0;
+    }
+    
+    #hero {
+        height: 100vh; /* Maintain full viewport height on mobile */
+        min-height: 100vh; /* Ensure it never gets smaller than full viewport */
+    }
+    
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    #hero p {
+        font-size: 1rem;
+    }
+    
+    .page-hero {
+        height: 30vh;
+        padding-top: 70px;
+    }
+    
+    .page-hero h2 {
+        font-size: 1.7rem;
+    }
+    
+    .page-hero p {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .mega-poster-placeholder {
+        min-height: 450px;
+        padding: 30px 10px;
+    }
+    
+    .mega-poster-placeholder h3 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+    
+    .poster-content {
+        padding: 20px 10px;
+    }
+    
+    .artist-name {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    
+    .headline-artists {
+        margin: 20px 0;
+    }
+    
+    .poster-dates {
+        font-size: 1.2rem;
+        margin: 20px 0 10px;
+        letter-spacing: 1px;
+    }
+    
+    .poster-location {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+    
+    .faq-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .external-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolachella Music Festival</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="bolachella_title.png" alt="Bolachella" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Bolachella</a></li>
+                    <li><a href="puestos.html">Puestos</a></li>
+                    <li><a href="merch.html">Merch</a></li>
+                    <li><a href="chelinas.html">Chelinas</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Bolachella 2025</h2>
+            <p>Bienvenido al mejor festival del mundo</p>
+            <a href="#tickets" class="btn">Quiero ir</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 style="text-align: center;">Sobre el Bolachella</h2>
+            <p>Bolachella tendrá lugar el día 22 de marzo, día oficial del equinoccio. Habrá una diversa oferta musical, que tendrá lugar a 
+                lo largo de todo el día, puestos de artesanía donde encontrar tesoros, merch disponible pa estar guapx y más sorpresitas</p>
+            <p>HORARIO: De 12:00 pm hasta el infinito</p> 
+            <p>HORARIO DE CONCIERTOS: Los conciertos empezaran sobre la hora de comer, no necesariamente por orden del cartel, pero la idea es que nos de tiempo a todxs a actuar con luz solar</p>
+            <p>UBICACIÓN:</p>
+            
+            <div class="location-icon-wrapper" style="text-align: center; margin: 30px auto;">
+                <a href="https://maps.app.goo.gl/6XvdmfwuajWBykbf7" id="location-link" style="display: inline-block; position: relative; width: 70px; height: 70px;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(45deg, #e91e63, #ff9d00); animation: pulse 1.5s infinite alternate; box-shadow: 0 4px 15px rgba(233, 30, 99, 0.5); z-index: 1;"></div>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.9); border-radius: 50%; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; padding: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); z-index: 2;">
+                        <img src="ubication_icon.png" alt="Ubicación" style="width: 100%; height: auto;">
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="lineup" style="width: 100%; max-width: 100%; overflow: hidden; text-align: center; padding: 50px 0; background: linear-gradient(45deg, #1a0a2e, #3a1a5e, #e91e63, #ff9d00); position: relative;">
+        <div style="max-width: 800px; width: 80%; margin: 0 auto; box-shadow: 0 5px 25px rgba(0,0,0,0.3); border-radius: 10px; overflow: hidden;">
+            <a href="carteldef.pdf" download style="cursor: pointer; display: block; position: relative;">
+                <img src="carteldef.png" alt="Bolachella 2025 Festival Lineup" style="max-width: 100%; width: 100%; height: auto; display: block; -webkit-user-select: none; -moz-user-select: none; user-select: none;">
+            </a>
+        </div>
+        <style>
+            /* Responsive styling for lineup section */
+            @media (max-width: 768px) {
+                #lineup div {
+                    width: 90%;
+                }
+            }
+            @media (max-width: 480px) {
+                #lineup div {
+                    width: 95%;
+                }
+                #lineup {
+                    padding: 30px 0;
+                }
+            }
+        </style>
+    </section>
+
+    <section id="tickets">
+        <div class="container">
+            <div class="tickets-container">
+                <div class="tickets-info">
+                    <h3>Equinoccio Fest</h3>
+                    <p>El Equinoccio surgió como objeto de celebración musical y de talentos para conmemorar la llegada de la primavera y recordar la temporada estival que tanto nos alegra. En su primera edición, se encontraron personas de todas partes de Madrid, y hubo encuentros, líos y enamoramientos. Nos gustó tanto que decidimos repetirlo.
+                        Si bien cada edición ha sido especial (recordamos ese Equinoccio cuando te robaban tus cosas y tenías que superar una prueba absurda para recuperarlas, o aquel en el que se nos olvidó y quedamos deprisa y corriendo a bebernos una cerveza en el campo), este año conmemoramos el octavo aniversario del Equinoccio, y ya que tenemos el privilegio de hacerlo en La Bola, tenía que ser a lo grande. 
+                        Todo el Bolachella, desde la organización, la participación y el disfrute, sale de cada unx de nosotrxs. Nada de esto sería posible sin las ganas de todxs para pasarlo bien un sábado cualquiera.
+                        Este año hay bastantes cosas nuevas que esperan vuestro cariño de siempre, y sorpresas que esperemos que os gusten.
+                        Trae a toda persona que creas que se lo puede pasar bien sin flipar demasiado con la de peña random que se junta a hacer cosas raras, o bueno a esas también tráelas. 
+                        Para cualquier ruego o consulta, contacta con cualquier organizador/a de la Bola.</p>
+                  
+                </div>
+                <div class="tickets-button">
+                    <div class="external-button-container">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScFD0NUIWWDh7KLKXvIiRkekEuHhlHF7093-T82LY4f2ihVqQ/viewform?usp=dialog" class="external-button">QUIERO IR</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>Alguna duda? Nos la suda!!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bolachella Music Festival. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
