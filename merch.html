@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Merch - Bolachella Music Festival</title>
     <style>
         /* Fallback background color - Most basic */
@@ -18,6 +18,10 @@
             background-color: #e83e8c !important; /* Fallback pink */
             overflow: hidden !important;
             z-index: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center !important;
         }
         
         /* Pseudo-element with gradient */
@@ -57,6 +61,115 @@
             font-size: 1.4rem !important;
             letter-spacing: 1px !important;
         }
+        
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            #merch-hero {
+                min-height: 180px !important;
+                padding: 30px 0 !important;
+            }
+            
+            #merch-hero .container {
+                padding: 30px 15px !important;
+            }
+            
+            #merch-hero h2 {
+                font-size: 2.2rem !important;
+            }
+            
+            #merch-hero p {
+                font-size: 1.1rem !important;
+            }
+            
+            /* Target inline styles with higher specificity */
+            body #merch-hero .container h2 {
+                font-size: 2.2rem !important;
+            }
+            
+            body #merch-hero .container p {
+                font-size: 1.1rem !important;
+            }
+            
+            #merch-bg-fallback {
+                min-height: 180px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #merch-hero {
+                min-height: 300px !important; /* Increased min-height */
+                height: auto !important; /* Allow auto height */
+                padding-top: 250px !important; /* Much larger padding-top to push below header */
+                padding-bottom: 30px !important;
+                margin-top: 50px !important; /* Add top margin for extra space */
+                position: relative !important; /* Ensure proper stacking */
+                z-index: 5 !important; /* Higher z-index for visibility */
+            }
+            
+            #merch-hero .container {
+                padding: 10px !important;
+                margin: 0 !important;
+                height: auto !important; /* Auto height instead of fixed */
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+            }
+            
+            #merch-hero h2 {
+                font-size: 2.5rem !important; /* Larger font size */
+                margin: 0 0 15px 0 !important; /* More space between title and subtitle */
+                padding: 10px !important;
+                line-height: 1.3 !important;
+                display: block !important; /* Ensure display */
+                visibility: visible !important; /* Force visibility */
+            }
+            
+            #merch-hero p {
+                font-size: 1.4rem !important; /* Larger font size */
+                margin: 10px 0 !important;
+                padding: 10px !important;
+                line-height: 1.3 !important;
+                display: block !important; /* Ensure display */
+                visibility: visible !important; /* Force visibility */
+            }
+            
+            /* Target inline styles with higher specificity */
+            body #merch-hero.page-hero {
+                min-height: 300px !important;
+                height: auto !important;
+                padding-top: 250px !important;
+                margin-top: 50px !important;
+            }
+            
+            body #merch-hero .container h2 {
+                font-size: 2.5rem !important;
+                margin: 0 0 15px 0 !important;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            body #merch-hero .container p {
+                font-size: 1.4rem !important;
+                margin: 10px 0 !important;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            /* Target wrapper div */
+            #merch-bg-fallback {
+                min-height: 300px !important;
+                height: auto !important;
+                margin-top: 50px !important;
+                position: relative !important;
+                z-index: 5 !important;
+            }
+            
+            /* Ensure animation stays visible */
+            #merch-hero::before {
+                min-height: 300px !important;
+                height: 100% !important;
+            }
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -82,7 +195,7 @@
     <div id="merch-bg-fallback" style="background-color: #e83e8c !important;" bgcolor="#e83e8c">
     
     <!-- Hero section with inline style fallbacks -->
-    <section id="merch-hero" class="page-hero" style="background-color: #e83e8c !important;" bgcolor="#e83e8c">
+    <section id="merch-hero" class="page-hero" style="background-color: #e83e8c !important; display: flex !important; align-items: center !important; justify-content: center !important; text-align: center !important; padding: 60px 0 !important;" bgcolor="#e83e8c">
         <div class="container">
             <h2>Merchandising oficial</h2>
             <p>Un recuerdo para toda la vida</p>
@@ -172,7 +285,7 @@
                 .merch-right-column h3 {
                     margin-top: 0;
                     font-size: 1.8rem;
-                    color: #333;
+                    color: white;
                 }
                 
                 .merch-right-column p {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -18,8 +18,11 @@
             background: linear-gradient(45deg, #1a237e, #283593, #ad1457, #c62828) !important;
             background-color: #1a237e !important;
             color: white !important;
-            padding: 40px 0 !important;
+            padding: 60px 0 !important;
             text-align: center !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
         }
         
         #puestos-hero h2 {
@@ -33,6 +36,105 @@
             font-size: 1.4rem !important;
             letter-spacing: 1px !important;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 768px) {
+            #puestos-hero {
+                min-height: 180px !important;
+                padding: 30px 0 !important;
+            }
+            
+            #puestos-hero .container {
+                padding: 30px 15px !important;
+            }
+            
+            #puestos-hero h2 {
+                font-size: 2.2rem !important;
+            }
+            
+            #puestos-hero p {
+                font-size: 1.1rem !important;
+            }
+            
+            /* Target inline styles with higher specificity */
+            body #puestos-hero .container h2 {
+                font-size: 2.2rem !important;
+            }
+            
+            body #puestos-hero .container p {
+                font-size: 1.1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #puestos-hero {
+                min-height: 300px !important; /* Increased min-height */
+                height: auto !important; /* Allow auto height */
+                padding-top: 250px !important; /* Much larger padding-top to push below header */
+                padding-bottom: 30px !important;
+                margin-top: 50px !important; /* Add top margin for extra space */
+                position: relative !important; /* Ensure proper stacking */
+                z-index: 5 !important; /* Higher z-index for visibility */
+            }
+            
+            #puestos-hero .container {
+                padding: 10px !important;
+                margin: 0 !important;
+                height: auto !important; /* Auto height instead of fixed */
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+            }
+            
+            #puestos-hero h2 {
+                font-size: 2.5rem !important; /* Larger font size */
+                margin: 0 0 15px 0 !important; /* More space between title and subtitle */
+                padding: 10px !important;
+                line-height: 1.3 !important;
+                display: block !important; /* Ensure display */
+                visibility: visible !important; /* Force visibility */
+            }
+            
+            #puestos-hero p {
+                font-size: 1.4rem !important; /* Larger font size */
+                margin: 10px 0 !important;
+                padding: 10px !important;
+                line-height: 1.3 !important;
+                display: block !important; /* Ensure display */
+                visibility: visible !important; /* Force visibility */
+            }
+            
+            /* Target inline styles with higher specificity */
+            body #puestos-hero.page-hero {
+                min-height: 300px !important;
+                height: auto !important;
+                padding-top: 250px !important;
+                margin-top: 50px !important;
+            }
+            
+            body #puestos-hero .container h2 {
+                font-size: 2.5rem !important;
+                margin: 0 0 15px 0 !important;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            body #puestos-hero .container p {
+                font-size: 1.4rem !important;
+                margin: 10px 0 !important;
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            /* Target wrapper div */
+            .puestos-hero-bg {
+                min-height: 300px !important;
+                height: auto !important;
+                margin-top: 50px !important;
+                position: relative !important;
+                z-index: 5 !important;
+            }
         }
     </style>
     <link rel="stylesheet" href="styles.css?v=20250302">
@@ -57,7 +159,7 @@
 
     <!-- Hero section with direct inline styles for maximum compatibility -->
     <div class="puestos-hero-bg" style="background: linear-gradient(45deg, #1a237e, #283593, #ad1457, #c62828) !important; background-color: #1a237e !important; width: 100%;">
-    <section id="puestos-hero" class="page-hero" style="background: linear-gradient(45deg, #1a237e, #283593, #ad1457, #c62828) !important; background-color: #1a237e !important; color: white !important; padding: 40px 0 !important;">
+    <section id="puestos-hero" class="page-hero" style="background: linear-gradient(45deg, #1a237e, #283593, #ad1457, #c62828) !important; background-color: #1a237e !important; color: white !important; padding: 60px 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; text-align: center !important;">
         <div class="container">
             <h2>Puestos</h2>
             <p>Descubre la oferta del Bolachella</p>
