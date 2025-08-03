@@ -52,7 +52,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #ff9d00;
+    color: #6BFF6C;
 }
 
 ul {
@@ -61,8 +61,8 @@ ul {
 
 .btn {
     display: inline-block;
-    background: #e91e63;
-    color: #fff;
+    background: #6BFF6C;
+    color: #121212;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -70,13 +70,16 @@ ul {
     transition: background 0.3s ease;
     border: none;
     cursor: pointer;
+    font-family: 'ChellaStyle', 'Arial', sans-serif;
+    margin-bottom: 15px;
 }
 
 .btn:hover {
     background: #c2185b;
+    color: #fff;
 }
 
-h1, h2, h3, .btn, nav ul li a, .external-button, .chelinas-main-btn {
+h1, h2, h3, nav ul li a, .external-button, .chelinas-main-btn {
     font-family: 'ChellaStyle', 'Arial', sans-serif;
     margin-bottom: 15px;
     color: #fff;
@@ -150,13 +153,13 @@ section#merch-hero {
 
 /* Header */
 header {
-    background-color: #1a0a2e;
+    background-color: #121212;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Increased z-index */
+    z-index: 1121212; /* Increased z-index */
 }
 
 header .container {
@@ -174,6 +177,7 @@ header .container {
     width: auto;
     min-width: 120px;
     position: relative;
+    object-position: top center;
 }
 
 .logo-image {
@@ -194,7 +198,7 @@ header .container {
 
 /* This style is kept for any remaining h1 tags, but hidden from view */
 header h1 {
-    color: #e91e63;
+    color: #6BFF6C;
     margin: 0;
     font-size: 28px;
     display: none;
@@ -215,7 +219,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff9d00;
+    color: #6BFF6C;
 }
 
 /* Hero Section */
@@ -229,7 +233,7 @@ nav ul li a:hover {
     justify-content: center; /* Center horizontally too */
     text-align: center;
     overflow: hidden;
-    background: url('background_2.jpg') no-repeat center center;
+    background: url('fest_back.jpg') no-repeat center center;
     background-size: cover;
     width: 100%; /* Ensure full width */
     margin: 0; /* Remove any margin */
@@ -292,7 +296,7 @@ nav ul li a:hover {
 
 /* Lineup Section */
 #lineup {
-    background-color: #1a0a2e;
+    background-color: #121212;
 }
 
 /* Festival Poster Styles */
@@ -311,7 +315,7 @@ nav ul li a:hover {
 }
 
 .mega-poster-placeholder {
-    background: linear-gradient(45deg, #1a0a2e, #3a1a5e, #e91e63, #ff9d00);
+    background: linear-gradient(45deg, #121212, #3a1a5e, #6BFF6C, #6BFF6C);
     border-radius: 0;
     padding: 80px 20px;
     width: 100%;
@@ -326,7 +330,7 @@ nav ul li a:hover {
 }
 
 .poster-content {
-    max-width: 1000px;
+    max-width: 1121212px;
     margin: 0 auto;
     color: white;
     text-align: center;
@@ -405,7 +409,7 @@ nav ul li a:hover {
 }
 
 .artist h3 {
-    color: #ff9d00;
+    color: #6BFF6C;
 }
 
 /* Tickets Section */
@@ -467,8 +471,8 @@ nav ul li a:hover {
 
 .external-button {
     display: inline-block;
-    background: #e91e63;
-    color: #fff;
+    background: #6BFF6C;
+    color: #121212;
     padding: 18px 40px;
     border-radius: 5px;
     font-size: 1.3rem;
@@ -482,6 +486,7 @@ nav ul li a:hover {
 
 .external-button:hover {
     background: #c2185b;
+    color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(233, 30, 99, 0.5);
 }
@@ -523,7 +528,7 @@ nav ul li a:hover {
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: linear-gradient(45deg, #e91e63, #ff9d00);
+    background: linear-gradient(45deg, #6BFF6C, #6BFF6C);
     box-shadow: 0 0 20px rgba(233, 30, 99, 0.6);
     z-index: 2;
     animation: pulse 1.5s infinite alternate;
@@ -546,12 +551,12 @@ nav ul li a:hover {
 
 .location-icon-link:hover .location-icon-pulse {
     animation-duration: 0.8s;
-    background: linear-gradient(45deg, #ff9d00, #e91e63);
+    background: linear-gradient(45deg, #6BFF6C, #6BFF6C);
 }
 
 /* Contact Section */
 #contact {
-    background-color: #1a0a2e;
+    background-color: #121212;
     text-align: center;
 }
 
@@ -589,7 +594,7 @@ footer {
 }
 
 .vendor-type {
-    color: #ff9d00;
+    color: #6BFF6C;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -686,8 +691,8 @@ footer {
 
 .chelinas-main-btn {
     display: inline-block;
-    background: #e91e63;
-    color: #fff;
+    background: #6BFF6C;
+    color: #121212;
     padding: 15px 30px;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -699,6 +704,7 @@ footer {
 
 .chelinas-main-btn:hover {
     background: #c2185b;
+    color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4);
 }
@@ -775,7 +781,7 @@ footer {
 }
 
 .faq-item h3 {
-    color: #ff9d00;
+    color: #6BFF6C;
     margin-bottom: 10px;
 }
 
@@ -790,14 +796,15 @@ footer {
     display: inline-block;
     margin: 0 15px;
     padding: 10px 20px;
-    background: #e91e63;
-    color: #fff;
+    background: #6BFF6C;
+    color: #000;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
     background: #c2185b;
+    color: #fff;
     transform: translateY(-3px);
 }
 
@@ -972,7 +979,7 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: #1a0a2e;
+        background: #121212;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
         flex-direction: column;
         text-align: center;
